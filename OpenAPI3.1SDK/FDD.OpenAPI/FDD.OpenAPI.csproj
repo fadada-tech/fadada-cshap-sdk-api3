@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7C967484-28D1-42F2-B288-35FC3D63313C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FDD.OpenAPI</RootNamespace>
+    <AssemblyName>FDD.OpenAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.HttpUtility, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.HttpUtility.1.0.0.1\lib\net40\Mono.HttpUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\RemoteServiceAttribute.cs" />
+    <Compile Include="EcologicalClient.cs" />
+    <Compile Include="OpenClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SDKModels\AccessTokenResponse.cs" />
+    <Compile Include="SDKModels\Accounts\GetAccessObjectInfoRequest.cs" />
+    <Compile Include="SDKModels\Accounts\GetAccessObjectInfoResponse.cs" />
+    <Compile Include="SDKModels\Accounts\GetAuthorizeUrlRequest.cs" />
+    <Compile Include="SDKModels\Accounts\GetAuthorizeUrlResponse.cs" />
+    <Compile Include="SDKModels\Accounts\GetCompanyInfoRequest.cs" />
+    <Compile Include="SDKModels\Accounts\GetCompanyInfoResponse.cs" />
+    <Compile Include="SDKModels\Accounts\GetCompanyUnionIdUrlRequest.cs" />
+    <Compile Include="SDKModels\Accounts\GetCompanyUnionIdUrlResponse.cs" />
+    <Compile Include="SDKModels\Accounts\GetFileBase64Request.cs" />
+    <Compile Include="SDKModels\Accounts\GetFileBase64Response.cs" />
+    <Compile Include="SDKModels\Accounts\GetPersonInfoRequest.cs" />
+    <Compile Include="SDKModels\Accounts\GetPersonInfoResponse.cs" />
+    <Compile Include="SDKModels\Accounts\GetUnionIdsRequest.cs" />
+    <Compile Include="SDKModels\Accounts\GetUnionIdsResponse.cs" />
+    <Compile Include="SDKModels\BaseReqeust.cs" />
+    <Compile Include="SDKModels\BaseResponse.cs" />
+    <Compile Include="SDKModels\Accounts\GetPersonUnionIdUrlRequest.cs" />
+    <Compile Include="SDKModels\Accounts\GetPersonUnionIdUrlResponse.cs" />
+    <Compile Include="SDKModels\Documents\DownloadEvidenceReportRequest.cs" />
+    <Compile Include="SDKModels\Documents\DownloadEvidenceReportResponse.cs" />
+    <Compile Include="SDKModels\Documents\GetByDraftIdRequest.cs" />
+    <Compile Include="SDKModels\Documents\GetByDraftIdResponse.cs" />
+    <Compile Include="SDKModels\Documents\GetBySignFileIdRequest.cs" />
+    <Compile Include="SDKModels\Documents\GetBySignFileIdResponse.cs" />
+    <Compile Include="SDKModels\Documents\LookUpCoordinatesRequest.cs" />
+    <Compile Include="SDKModels\Documents\LookUpCoordinatesResponse.cs" />
+    <Compile Include="SDKModels\Documents\ProfessionalContractReportDownloadRequest.cs" />
+    <Compile Include="SDKModels\Documents\ProfessionalContractReportDownloadResponse.cs" />
+    <Compile Include="SDKModels\Documents\UploadFileByUrlRequest.cs" />
+    <Compile Include="SDKModels\Documents\UploadFileByUrlResponse.cs" />
+    <Compile Include="SDKModels\Documents\UploadFileRequest.cs" />
+    <Compile Include="SDKModels\Documents\UploadFileResponse.cs" />
+    <Compile Include="SDKModels\Documents\VerifySignatureRequest.cs" />
+    <Compile Include="SDKModels\Documents\VerifySignatureResponse.cs" />
+    <Compile Include="SDKModels\Oauth2\CancelAuthSignAuthRequest.cs" />
+    <Compile Include="SDKModels\Oauth2\CancelAuthSignAuthResponse.cs" />
+    <Compile Include="SDKModels\Oauth2\GetAutoSignAuthUrlRequest.cs" />
+    <Compile Include="SDKModels\Oauth2\GetAutoSignAuthUrlResponse.cs" />
+    <Compile Include="SDKModels\Organization\DelEmployeeRequest.cs" />
+    <Compile Include="SDKModels\Organization\DelEmployeeResponse.cs" />
+    <Compile Include="SDKModels\Organization\GetAddEmployeeUrlRequest.cs" />
+    <Compile Include="SDKModels\Organization\GetAddEmployeeUrlResponse.cs" />
+    <Compile Include="SDKModels\Organization\GetAddSubCompanyUrlRequest.cs" />
+    <Compile Include="SDKModels\Organization\GetAddSubCompanyUrlResponse.cs" />
+    <Compile Include="SDKModels\Organization\GetChangeCompanyMajorUrlRequest.cs" />
+    <Compile Include="SDKModels\Organization\GetChangeCompanyMajorUrlResponse.cs" />
+    <Compile Include="SDKModels\Organization\GetChildCompanyListRequest.cs" />
+    <Compile Include="SDKModels\Organization\GetChildCompanyListResponse.cs" />
+    <Compile Include="SDKModels\Organization\GetEmployeeRequest.cs" />
+    <Compile Include="SDKModels\Organization\GetEmployeeResponse.cs" />
+    <Compile Include="SDKModels\Organization\RemoveSubCompanyRequest.cs" />
+    <Compile Include="SDKModels\Organization\RemoveSubCompanyResponse.cs" />
+    <Compile Include="SDKModels\ReviseTask\CancelReviseTaskRequest.cs" />
+    <Compile Include="SDKModels\ReviseTask\CancelReviseTaskResponse.cs" />
+    <Compile Include="SDKModels\ReviseTask\CreateReviseTaskRequest.cs" />
+    <Compile Include="SDKModels\ReviseTask\CreateReviseTaskResponse.cs" />
+    <Compile Include="SDKModels\ReviseTask\GetFillFileUrlRequest.cs" />
+    <Compile Include="SDKModels\ReviseTask\GetFillFileUrlResponse.cs" />
+    <Compile Include="SDKModels\ReviseTask\ReviseTaskDetailRequest.cs" />
+    <Compile Include="SDKModels\ReviseTask\ReviseTaskDetailResponse.cs" />
+    <Compile Include="SDKModels\ReviseTask\SaveFillValuesRequest.cs" />
+    <Compile Include="SDKModels\ReviseTask\SaveFillValuesResponse.cs" />
+    <Compile Include="SDKModels\Seal\AddCompanySealRequest.cs" />
+    <Compile Include="SDKModels\Seal\AddCompanySealResponse.cs" />
+    <Compile Include="SDKModels\Seal\CancelSealAuthRequest.cs" />
+    <Compile Include="SDKModels\Seal\CancelSealAuthResponse.cs" />
+    <Compile Include="SDKModels\Seal\CompanySealDetailRequest.cs" />
+    <Compile Include="SDKModels\Seal\CompanySealDetailResponse.cs" />
+    <Compile Include="SDKModels\Seal\CompanySealListRequest.cs" />
+    <Compile Include="SDKModels\Seal\CompanySealListResponse.cs" />
+    <Compile Include="SDKModels\Seal\DelCompanySealRequest.cs" />
+    <Compile Include="SDKModels\Seal\DelCompanySealResponse.cs" />
+    <Compile Include="SDKModels\Seal\SealAuthRequest.cs" />
+    <Compile Include="SDKModels\Seal\SealAuthResponse.cs" />
+    <Compile Include="SDKModels\Signtasks\CancelRequest.cs" />
+    <Compile Include="SDKModels\Signtasks\CancelResponse.cs" />
+    <Compile Include="SDKModels\Signtasks\CreateTaskByDraftIdRequest.cs" />
+    <Compile Include="SDKModels\Signtasks\CreateTaskByDraftIdResponse.cs" />
+    <Compile Include="SDKModels\Signtasks\CreateTaskByFileRequest.cs" />
+    <Compile Include="SDKModels\Signtasks\CreateTaskByFileResponse.cs" />
+    <Compile Include="SDKModels\Signtasks\GetSentUrlRequest.cs" />
+    <Compile Include="SDKModels\Signtasks\GetSentUrlResponse.cs" />
+    <Compile Include="SDKModels\Signtasks\GetSignPreviewUrlRequest.cs" />
+    <Compile Include="SDKModels\Signtasks\GetSignPreviewUrlResponse.cs" />
+    <Compile Include="SDKModels\Signtasks\GetSignUrlRequest.cs" />
+    <Compile Include="SDKModels\Signtasks\GetSignUrlResponse.cs" />
+    <Compile Include="SDKModels\Signtasks\GetTaskDetailByTaskIdRequest.cs" />
+    <Compile Include="SDKModels\Signtasks\GetTaskDetailByTaskIdResponse.cs" />
+    <Compile Include="SDKModels\Signtasks\UnlockRequest.cs" />
+    <Compile Include="SDKModels\Signtasks\UnlockResponse.cs" />
+    <Compile Include="SDKModels\Signtasks\UrgeSignRequest.cs" />
+    <Compile Include="SDKModels\Signtasks\UrgeSignResponse.cs" />
+    <Compile Include="SDKModels\Template\DelCompanyTemplateFileRequest.cs" />
+    <Compile Include="SDKModels\Template\DelCompanyTemplateFileResponse.cs" />
+    <Compile Include="SDKModels\Template\DownloadCompanyTemplateFileRequest.cs" />
+    <Compile Include="SDKModels\Template\DownloadCompanyTemplateFileResponse.cs" />
+    <Compile Include="SDKModels\Template\GetCompanyTemplatePreviewUrlRequest.cs" />
+    <Compile Include="SDKModels\Template\GetCompanyTemplatePreviewUrlResponse.cs" />
+    <Compile Include="SDKModels\Template\GetTemplateDetailRequest.cs" />
+    <Compile Include="SDKModels\Template\GetTemplateDetailResponse.cs" />
+    <Compile Include="SDKModels\Template\GetTemplateMainUrlRequest.cs" />
+    <Compile Include="SDKModels\Template\GetTemplateMainUrlResponse.cs" />
+    <Compile Include="SDKModels\Template\QueryCompanyTemplateListRequest.cs" />
+    <Compile Include="SDKModels\Template\QueryCompanyTemplateListResponse.cs" />
+    <Compile Include="SDKModels\Template\TemplatInitRequest.cs" />
+    <Compile Include="SDKModels\Template\TemplatInitResponse.cs" />
+    <Compile Include="SDKModels\Template\UploadCompanyTemplateFileRequest.cs" />
+    <Compile Include="SDKModels\Template\UploadCompanyTemplateFileResponse.cs" />
+    <Compile Include="SDKModels\ThirdUser\CancelRequest.cs" />
+    <Compile Include="SDKModels\ThirdUser\CancelResponse.cs" />
+    <Compile Include="SDKModels\ThirdUser\GetOpenServerUrlRequest.cs" />
+    <Compile Include="SDKModels\ThirdUser\GetOpenServerUrlResponse.cs" />
+    <Compile Include="SDKModels\ThirdUser\GetUserTokenRequest.cs" />
+    <Compile Include="SDKModels\ThirdUser\GetUserTokenResponse.cs" />
+    <Compile Include="Utility\CryptTool.cs" />
+    <Compile Include="Utility\FileItem.cs" />
+    <Compile Include="Utility\HttpUrl.cs" />
+    <Compile Include="Utility\HttpWebHelp.cs" />
+    <Compile Include="Utility\OrdinalComparer.cs" />
+    <Compile Include="Utility\SignUtil.cs" />
+    <Compile Include="Utility\SM3.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
