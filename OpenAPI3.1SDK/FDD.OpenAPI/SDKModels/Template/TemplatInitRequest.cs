@@ -17,6 +17,7 @@ namespace FDD.OpenAPI.SDKModels.Template
         public class TemplateInfo
         {
             public string templateName { get; set; }
+            public string fileSource { get; set; }
             public string templateRemark { get; set; }
             public List<Roles> roles { get; set; }
         }

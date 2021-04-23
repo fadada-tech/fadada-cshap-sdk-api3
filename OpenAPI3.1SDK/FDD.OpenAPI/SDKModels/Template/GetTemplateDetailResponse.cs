@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,10 +30,14 @@ namespace FDD.OpenAPI.SDKModels.Template
         }
         public class Widgets
         {
+            [DefaultValue("")]
             public string widgetName { get; set; }
+            [DefaultValue("")]
             public string widgetValue { get; set; }
-            public int signStyle { get; set; }
-            public int isRequired { get; set; }
+            [DefaultValue("")]
+            public string signStyle { get; set; }
+            [DefaultValue("")]
+            public string isRequired { get; set; }
         }
         public class Roles
         {

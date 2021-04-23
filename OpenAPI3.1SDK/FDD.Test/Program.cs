@@ -11,6 +11,7 @@ using FDD.OpenAPI.SDKModels.Seal;
 using FDD.OpenAPI.SDKModels.Organization;
 using FDD.OpenAPI.SDKModels.Oauth2;
 using FDD.OpenAPI.SDKModels.ThirdUser;
+using System.Collections.Generic;
 
 namespace FDD.Test
 {
@@ -25,17 +26,17 @@ namespace FDD.Test
         static void Main(string[] args)
         {
             var ServerUrl = "https://sandboxapi.fadada.com/api/v3";
-            var AppId = "FA35667525";
-            var AppKey = "GWXJXBGYW48NDBJFNQRVQ5ENNJJTWCKM";
+            var AppId = "FA13671019";
+            var AppKey = "FMS8B7UZPZL4XVXQAFG4BSTTN418D43X";
             //var client = new OpenClient(ServerUrl, AppId, AppKey);
             var client = new EcologicalClient(ServerUrl, AppId, AppKey);
 
-            #region 3.1.1 获取接入方实名绑定信息
-            var result1 = client.Execute(new GetAccessObjectInfoRequest()
-            {
-            });
-            Console.WriteLine(JsonConvert.SerializeObject(result1));
-            #endregion
+            //#region 3.1.1 获取接入方实名绑定信息
+            //var result1 = client.Execute(new GetAccessObjectInfoRequest()
+            //{
+            //});
+            //Console.WriteLine(JsonConvert.SerializeObject(result1));
+            //#endregion
 
             //#region 3.1.2 获取个人实名绑定地址
             //var result2 = client.Execute(new GetPersonUnionIdUrlRequest()
@@ -221,6 +222,7 @@ namespace FDD.Test
             //#region 3.1.24 模板详情信息查询
             //var result24 = client.Execute(new GetTemplateDetailRequest()
             //{
+            //    templateId= "1619069961196143640"
             //});
             //Console.WriteLine(JsonConvert.SerializeObject(result24));
             //#endregion

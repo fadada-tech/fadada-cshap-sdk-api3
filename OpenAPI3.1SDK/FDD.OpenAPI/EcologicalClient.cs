@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using FDD.OpenAPI.Attributes;
 using FDD.OpenAPI.SDKModels;
 using FDD.OpenAPI.Utility;
