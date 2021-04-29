@@ -171,7 +171,7 @@ namespace FDD.OpenAPI
             headerParames.Add("X-FDD-Api-Sign-Type", "HMAC-SHA256");
             headerParames.Add("X-FDD-Api-Timestamp", timestamp);
             headerParames.Add("X-FDD-Api-Nonce", Guid.NewGuid().ToString("N"));
-            headerParames.Add("X-FDD-Api-User-Token", userToken);
+            headerParames.Add("X-FDD-Api-User-Token", userToken);
             headerParames.Add("X-FDD-Api-Token", token);
             headerParames.Add("X-FDD-Api-Sign", Utility.SignUtil.GetSign(headerParames.Union(body), timestamp, AppKey));
 

@@ -12,6 +12,7 @@ using FDD.OpenAPI.SDKModels.Organization;
 using FDD.OpenAPI.SDKModels.Oauth2;
 using FDD.OpenAPI.SDKModels.ThirdUser;
 using System.Collections.Generic;
+using static FDD.OpenAPI.SDKModels.Template.TemplatInitRequest;
 
 namespace FDD.Test
 {
@@ -26,8 +27,8 @@ namespace FDD.Test
         static void Main(string[] args)
         {
             var ServerUrl = "https://sandboxapi.fadada.com/api/v3";
-            var AppId = "FA13671019";
-            var AppKey = "FMS8B7UZPZL4XVXQAFG4BSTTN418D43X";
+            var AppId = "FA67694018";
+            var AppKey = "UNPRNJ8M35RUBJCTVOTJSL2AXQRLGMZS";
             //var client = new OpenClient(ServerUrl, AppId, AppKey);
             var client = new EcologicalClient(ServerUrl, AppId, AppKey);
 
@@ -184,10 +185,25 @@ namespace FDD.Test
             //Console.WriteLine(JsonConvert.SerializeObject(result18));
             //#endregion
 
+            //List<Roles> lstroles = new List<Roles>();
+            //var roles = new Roles()
+            //{
+            //    roleName = "222",
+            //    roleType = 1,//角色类型，1个人、2企业
+            //    rolePermission = 2,//角色权限，1填写、2签署、3填写+签署
+            //};
+            //lstroles.Add(roles);
+            //var templateInfo = new TemplatInitRequest.TemplateInfo()
+            //{
+            //    templateName = "asjdfk",
+            //    templateRemark = "sadfa",
+            //    roles = lstroles
+            //};
             //#region 3.1.19 创建模板
             //var result19 = client.Execute(new TemplatInitRequest()
             //{
-            //});
+            //    templateInfo= templateInfo
+            //}, "0d99e32b358e466c8686bb6223092666");
             //Console.WriteLine(JsonConvert.SerializeObject(result19));
             //#endregion
 
@@ -219,13 +235,13 @@ namespace FDD.Test
             //Console.WriteLine(JsonConvert.SerializeObject(result23));
             //#endregion
 
-            //#region 3.1.24 模板详情信息查询
-            //var result24 = client.Execute(new GetTemplateDetailRequest()
-            //{
-            //    templateId= "1619069961196143640"
-            //});
-            //Console.WriteLine(JsonConvert.SerializeObject(result24));
-            //#endregion
+            #region 3.1.24 模板详情信息查询
+            var result24 = client.Execute(new GetTemplateDetailRequest()
+            {
+                templateId = "1619069961196143640"
+            });
+            Console.WriteLine(JsonConvert.SerializeObject(result24));
+            #endregion
 
             //#region 3.1.25 模板文件下载
             //var result25 = client.Execute(new DownloadCompanyTemplateFileRequest()

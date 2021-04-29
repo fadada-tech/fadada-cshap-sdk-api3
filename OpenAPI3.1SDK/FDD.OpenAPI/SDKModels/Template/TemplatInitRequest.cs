@@ -10,7 +10,7 @@ namespace FDD.OpenAPI.SDKModels.Template
     /// <summary>
     /// 创建模板
     /// </summary>
-    [RemoteService("/template/templatInit", "POST")]
+    [RemoteService("/template/templateInit", "POST")]
    public class TemplatInitRequest : BaseReqeust<TemplatInitResponse>
     {
         public TemplateInfo templateInfo { get; set; }
